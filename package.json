@@ -3,20 +3,20 @@
     "version": "1.0.0",
     "description": "A template for my webpack + vue configuration",
     "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TReed1104/webpack-vue-template.git"
+    },
+    "author": {
+        "name": "Tom Reed"
+    },
+    "license": "MIT",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "cross-env webpack --config build/webpack.production.config.js",
         "dev-local": "cross-env webpack-dev-server --config build/webpack.development.config.js",
         "dev": "cross-env webpack-dev-server --config build/webpack.development.config.js --host 0.0.0.0"
     },
-    "author": {
-        "name": "Tom Reed"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/TReed1104/webpack-vue-template.git"
-    },
-    "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.8.7",
         "@babel/preset-env": "^7.8.7",
