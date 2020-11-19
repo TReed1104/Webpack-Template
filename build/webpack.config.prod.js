@@ -13,6 +13,12 @@ function resolve(dir) {
 module.exports = {
     mode: 'production',
     entry: './src/app.js',
+    output: {
+        filename: 'app.bundle.js',
+    },
+    resolve: {
+        extensions: [ '.vue', '.js', '.jsx' ],
+    },
     module: {
         rules: [
             {
@@ -20,7 +26,7 @@ module.exports = {
                 use: 'vue-loader'
             },
             {
-                test: /\.scss$/,
+                test: /\.(css|scss|sass)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
@@ -28,24 +34,34 @@ module.exports = {
                 ]
             },
             {
-                test: /\.js$/,
-                use: 'babel-loader'
-            }
+                test: /\.(js|jsx)$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
         ]
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
-            filename: 'index.html',
             template: 'src/pages/index.html',
+            filename: './index.html',
             inject: true
         }),
-        new CopyWebpackPlugin([{
-            from: resolve('content'),
-            to: resolve('dist/content'),
-            toType: 'dir'
-        }]),
+        new CopyWebpackPlugin(
+            {
+                patterns: [
+                    { 
+                        from: resolve('content'), 
+                        to: resolve('dist/content'), 
+                        toType: 'dir', 
+                        noErrorOnMissing: true 
+                    }
+                ]
+            }
+        ),
         new MiniCssExtractPlugin({
             filename: 'main.css'
         })
