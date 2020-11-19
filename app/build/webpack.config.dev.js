@@ -23,7 +23,7 @@ module.exports = {
         }
     },
     resolve: {
-        extensions: [ '.vue', '.js', '.jsx' ],
+        extensions: ['.vue', '.js', '.jsx'],
     },
     module: {
         rules: [
@@ -59,11 +59,11 @@ module.exports = {
         new CopyWebpackPlugin(
             {
                 patterns: [
-                    { 
-                        from: resolve('content'), 
-                        to: resolve('dist/content'), 
-                        toType: 'dir', 
-                        noErrorOnMissing: true 
+                    {
+                        from: resolve('content'),
+                        to: resolve('dist/content'),
+                        toType: 'dir',
+                        noErrorOnMissing: true
                     }
                 ]
             }
