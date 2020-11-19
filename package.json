@@ -13,9 +13,9 @@
     "license": "MIT",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "cross-env webpack --config build/webpack.production.config.js",
-        "dev-local": "cross-env webpack-dev-server --config build/webpack.development.config.js",
-        "dev": "cross-env webpack-dev-server --config build/webpack.development.config.js --host 0.0.0.0"
+        "build": "cross-env webpack --config build/webpack.config.prod.js",
+        "dev": "cross-env webpack-dev-server --open --config build/webpack.config.dev.js",
+        "dev-docker": "cross-env webpack-dev-server --config build/webpack.config.dev.js --host 0.0.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.8.7",
