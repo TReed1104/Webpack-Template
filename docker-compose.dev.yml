@@ -1,0 +1,16 @@
+version: "3.5"
+networks:
+    vue-app-network:
+        name: vue-app-network
+services:
+    vue-app:
+        container_name: vue-app
+        image: node:latest
+        volumes:
+            - ./app:/app
+        working_dir: /app
+        ports:
+            - "8080:8080"
+        command: "bash -c 'yarn && yarn run dev-docker'"
+        networks:
+            - vue-app-network
