@@ -1,7 +1,7 @@
 {
-    "name": "wepacl-vue-template",
+    "name": "wepack-vue-template",
     "version": "1.0.0",
-    "description": "A template for my webpack + vue configuration",
+    "description": "A template for Webpack Vue projects",
     "main": "index.js",
     "repository": {
         "type": "git",
