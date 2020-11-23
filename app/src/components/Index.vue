@@ -6,6 +6,12 @@
 </template>
 
 <script>
+    //import JavascriptTemplate from './TemplateJavascript.vue';
+    //import TypescriptTemplate from "./TemplateTypescript.vue";
     export default {
+        components: {
+            //JavascriptTemplate,
+            //TypescriptTemplate
+        }
     }
 </script>
