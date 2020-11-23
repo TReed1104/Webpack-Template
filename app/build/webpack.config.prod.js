@@ -17,13 +17,21 @@ module.exports = {
         filename: 'app.bundle.js',
     },
     resolve: {
-        extensions: ['.vue', '.js', '.jsx'],
+        extensions: ['.vue', '.ts', '.tsx', '.js', '.jsx'],
     },
     module: {
         rules: [
             {
                 test: /\.vue$/,
                 use: 'vue-loader'
+            },
+            {
+                test: /\.(ts|tsx)?$/,
+                loader: 'ts-loader',
+                exclude: /node_modules/,
+                options: {
+                    appendTsSuffixTo: [/\.vue$/],
+                }
             },
             {
                 test: /\.(css|scss|sass)$/,
