@@ -1,5 +1,24 @@
 # Vue Project Template
-Template project for Vue projects, built using Webpack and Babel - with support for local or Docker deployment.
+## Overview
+Repository template for Vue.js projects
+
+### Features
+- Webpack Compilation
+- Babel transpiling
+- Javascript and Typescript support
+- Sass, Scss and Css support
+- Vue component file (.vue) support
+- Live development via Hot module reloading
+- Local and Docker deployment
+- NPM and yarn support (yarn by default)
+
+### Dependencies
+- Node.js
+- Yarn package manager (Default - npm alternatively is supported)
+- Docker (optional - for Docker deployment)
+- Bash (optional - for scripted Docker deployment)
+
+<br>
 
 ## Yarn Run Commands
 Local use with Yarn package manager.
