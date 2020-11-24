@@ -7,7 +7,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <router-link tag="a" class="nav-item nav-link" :to="{name: 'Index'}">Home</router-link>
+                    <router-link tag="a" class="nav-item nav-link" :to="{name: 'Home'}">Home</router-link>
                 </div>
             </div>
         </nav>
@@ -20,7 +20,6 @@
 </template>
 
 <script>
-    import 'bootstrap';
     export default {
 
     }
