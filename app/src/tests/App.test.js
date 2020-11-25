@@ -9,3 +9,10 @@ import App from '../components/App.vue';
 import Home from '../components/Home.vue';
 import JavascriptTemplate from '../components/TemplateJavascript.vue';
 import TypescriptTemplate from "../components/TemplateTypescript.vue";
+
+// Configure the vue instance
+const localVue = createLocalVue();
+localVue.use(VueRouter);
+localVue.use(Vuex);
+const store = new Vuex.Store();
+
