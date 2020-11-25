@@ -1,11 +1,11 @@
-{
-    "presets": [
+module.exports = {
+    presets: [
         [
             "@babel/preset-env", {
                 "useBuiltIns": "entry"
         }]
     ],
-    "plugins": [
+    plugins: [
         "@babel/plugin-proposal-class-properties"
     ]
 }
