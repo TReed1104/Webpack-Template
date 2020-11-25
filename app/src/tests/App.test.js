@@ -16,3 +16,24 @@ localVue.use(VueRouter);
 localVue.use(Vuex);
 const store = new Vuex.Store();
 
+// Default rendering test for the App core components
+it('renders without crashing', () => {
+    const wrapper = mount(App, {
+        localVue,
+        router,
+        store,
+    });
+});
+
+// Test examples for testing the default rendering behaviour of the vue components
+it('renders without crashing', () => {
+    const wrapper = mount(Home);
+});
+
+it('renders without crashing', () => {
+    const wrapper = mount(JavascriptTemplate);
+});
+
+it('renders without crashing', () => {
+    const wrapper = mount(TypescriptTemplate);
+});
